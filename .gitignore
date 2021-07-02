@@ -1,10 +1,6 @@
 .DS_Store
-thedata.csv
 __pycache__
-/app/__pycache__
-docker-compose.yml
 lib/python3.7/site-packages
-/app/templates
+templates
 bin
-app/Dockerfile
 lib
