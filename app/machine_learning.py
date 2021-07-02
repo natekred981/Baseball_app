@@ -16,14 +16,8 @@ mlp = Sequential()
 mlp.add(Dense(20,activation='sigmoid',name='input'))
 mlp.add(Dense(2, activation='softmax'))
 mlp.compile(loss='categorical_crossentropy', optimizer='adam', metrics = ['accuracy'])
-mlp.fit(x_train,y_train, epochs = 5, verbose = 1)
+mlp.fit(x_train,y_train, epochs = 1, verbose = 1)
 print('Test accuracy: %.2f %%'%(100*mlp.evaluate(x_test,y_test, verbose=1)[1]))
 """ data.to_csv("./Baseball_HOF/here.csv")
-config = {
-        'user': 'root',
-        'password': ',s;s_ghi&9=A',
-        'host': 'db',
-        'port': '3306',
-        'database': 'lahaman2016'
-    }
+
 connection = mysql.connector.connect(**config) """

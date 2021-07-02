@@ -1,9 +1,16 @@
 import mysql.connector as msql
 import pandas as pd
 
+"""
+connect_database: connects to the mysql database created from the 
+                  lahman2016 database built via the the queries
+                  listed in the db directory
 
+create_table: pulls data from different player statistics and 
+              organizes it into one dataframe
+
+"""
 def connect_database():
-# function for connecting to mysql server
     mydb = msql.connect(
         host="localhost",
         user="root",
@@ -11,6 +18,7 @@ def connect_database():
         database="lahman2016"
     )
     return mydb
+
 def create_table():
     mydb = connect_database()
     """First SQL_Query designed to QUERY batting statistics
@@ -67,12 +75,3 @@ def create_table():
     df.to_csv("thedata.csv")
     return(df,players)
 create_table()
-    # print(df4['years'].isnull().values.any())
-    # print(df4['nominated'].isnull().values.any())
-    # table columns
-  #  """
-   # player
-   # years played in MLB
-   # average stats split into subsections of 5 years:
-   #     include average, ops, stolen bases,
-   # """
