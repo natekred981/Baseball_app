@@ -74,4 +74,3 @@ def create_table():
 
     df.to_csv("thedata.csv")
     return(df,players)
-create_table()
