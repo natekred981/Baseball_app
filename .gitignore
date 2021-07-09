@@ -1,6 +1,6 @@
 .DS_Store
 __pycache__
 lib/python3.7/site-packages
-templates
 bin
 lib
+pyvenv.cfg
