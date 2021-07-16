@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
     <form action='/'>
@@ -7,7 +8,7 @@
         <input class="button" type="submit" value="Make Another Prediction">
         <div class="stats">
             {% for table in stats %}
-                {{ table | safe }}
+            {{ table | safe }}
 
             {% endfor %}
         </div>
@@ -43,8 +44,9 @@
             font-family: Arial, Helvetica, sans-serif;
             color: black;
         }
-    .stats {
-        display: flex;
+
+        .stats {
+            display: flex;
             justify-content: center;
             position: absolute;
             top: 70%;
@@ -53,7 +55,7 @@
             font-weight: 600;
             font-family: Arial, Helvetica, sans-serif;
             color: black;
-    }
+        }
     </style>
 </body>
 

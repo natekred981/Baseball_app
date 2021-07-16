@@ -45,14 +45,12 @@ def create_table():
             Batting 
             group by playerID''', mydb
     )
-    # creating three other columns out of pre-existin columns
     df = pd.DataFrame(SQL_Query)
     df["AVG"] = (df["H"])/(df["AB"])
     df["OBP"] = (df['H'] + df['BB']) / (df['AB'] + df["BB"])
     df['SLG'] = ((df['H'] - df['2B'] - df['3B'] - df['HR']) +
                  df['2B'] * 2 + df['3B']*3 + df['HR']*4)/(df["AB"])
 
-    # pitching statistics
     SQL_Query = pd.read_sql_query(
         ''' SELECT
             playerID, sum(W) as W, sum(GS) as GS, sum(SV) as SV, sum(SO) as SO, AVG(ERA) as ERA, sum(BB) as BB, sum(H) as H, sum(IPouts/3) as IP FROM
