@@ -10,3 +10,8 @@ Using the data, my goal was to come up with an accurate machine learning algorit
 
 ## How to Use
 Users will be able to enter a baseball player regardless of whether they are active players or retired, and the algorithm will predict whether or not they will make the Hall of Fame. Because it is dockerized, the project will be able to be run out of the box.
+
+## Files
+main.py: flask server
+fit.py: machine learning algorithm
+extraction.py: Querying the database
