@@ -13,5 +13,5 @@ Users will be able to enter a baseball player regardless of whether they are act
 
 ## Files
 main.py: flask server __
-fit.py: machine learning algorithm __
-extraction.py: Querying the database
+fit.py: machine learning algorithm <br />
+extraction.py: Querying the database <br />
